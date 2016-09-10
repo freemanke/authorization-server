@@ -1,0 +1,117 @@
+{
+	"variables": [],
+	"info": {
+		"name": "JWTAuthorization",
+		"_postman_id": "a6737b93-475f-e9eb-8f88-80f152441704",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "访问2#服务器接口",
+			"request": {
+				"url": "http://localhost:13090/api/values",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkNDNlN2MzMy05MTMyLTQ2ZjktOGQwYS0wYzQ0ZWVlNDg3NWEiLCJpYXQiOiIxNDczNTA3NzcyLjg1OTUxIiwiTmFtZSI6ImFkbWluIiwiUm9sZSI6WyJVc2VyIiwiQWRtaW4iXSwiRGF0ZU9mQmlydGgiOiI5LzEwLzIwMTYgNzoxMjo1MiBQTSIsIm5iZiI6MTQ3MzUwNTk3MiwiZXhwIjoxNDczNTM0NzcyLCJpc3MiOiJBdXRob3JpemF0aW9uIFNlcnZlciIsImF1ZCI6IlJlc291cmNlU2VydmVyIDIjIn0.yVqkaPGHeUOdYgRyqqdzra7Y6w64uFURDbK5v1n9rZU",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "获取2#资源服务访问令牌",
+			"request": {
+				"url": "http://localhost:7302/oauth2/token",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "RS2001",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "获取1#资源服务访问令牌",
+			"request": {
+				"url": "http://localhost:7302/oauth2/token",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "RS1001",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "访问1#号服务器接口",
+			"request": {
+				"url": "http://localhost:7302/api/values",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3NGUxYzBlZi1mZDgwLTRkMjgtOTUzNy0yYWVlY2Q0M2Y4YTgiLCJpYXQiOiIxNDczNTA3ODU1LjY2MTg5IiwiTmFtZSI6ImFkbWluIiwiUm9sZSI6WyJVc2VyIiwiQWRtaW4iXSwiRGF0ZU9mQmlydGgiOiI5LzEwLzIwMTYgNzoxNDoxNSBQTSIsIm5iZiI6MTQ3MzUwNjA1NSwiZXhwIjoxNDczNTM0ODU1LCJpc3MiOiJBdXRob3JpemF0aW9uIFNlcnZlciIsImF1ZCI6IlJlc291cmNlU2VydmVyIDEjIn0.DjOr30VDTA3X2aNRaAvlrhqeP3Vc5rLzpC4lhcaJr5s",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
